@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chife</title>
+    <style>
+      :root {
+        --dark: #222;
+        --dark-alt: #333;
+        --light: #eee;
+        --light-alt: #ccc;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --dark: #eee;
+          --dark-alt: #ccc;
+          --light: #222;
+          --light-alt: #333;
+        }
+      }
+
+      body {
+        color: var(--dark);
+        background-color: var(--light);
+        max-width: 500px;
+        margin: 0 auto;
+        font-family: sans-serif;
+      }
+
+      a,
+      a:visited {
+        color: var(--dark);
+      }
+
+      a:hover {
+        color: var(--light);
+        background-color: var(--dark);
+        text-decoration-color: var(--dark);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chife</h1>
+    <p>
+      A <a href="https://github.com/solusipse/fiche">Fiche</a>-inspired
+      pastebin.
+    </p>
+    <h2>Creating</h2>
+    <pre>cat file.txt | nc &lt;domain&gt; 15121</pre>
+    <h2>Viewing</h2>
+    <ul>
+      <li>
+        Pastes will be available at http://domain/<code>&lt;slug&gt;</code>.txt.
+      </li>
+      <li>You will get the <code>&lt;slug&gt;</code> after pasting.</li>
+    </ul>
+    <h2>Source</h2>
+    <p>
+      The source is
+      <a href="https://github.com/roj1512/chife">available on GitHub</a>.
+    </p>
+  </body>
+</html>
