@@ -42,7 +42,7 @@ func NewSlug() string {
 }
 
 func GetFileName(slug string) string {
-	return path.Join(config.PASTES_DIRECTORY, slug)
+	return path.Join(config.PASTES_DIRECTORY, slug+".txt")
 }
 
 func Read(reader *bufio.Reader) []rune {
